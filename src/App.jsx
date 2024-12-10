@@ -8,7 +8,7 @@ function App() {
 
   const addTask = () => {
     if (!task.trim()) {
-      alert("Please enter a valid task!");
+      alert("please add something");
       return;
     }
 
@@ -19,13 +19,13 @@ function App() {
       setData(updated);
       setEditIt(null);
     } else {
-      const currentTime = new Date().toLocaleTimeString(); // Get current time
+      const currentTime = new Date().toLocaleTimeString(); 
       setData([
         ...data,
         { id: Date.now(), name: task, time: currentTime, done: false },
       ]);
     }
-    setTask(""); // Clear the input field
+    setTask(""); 
   };
 
   const handleInputChange = (e) => {
@@ -118,7 +118,27 @@ function App() {
             </div>
             <small>{t.time}</small>
             <button onClick={() => toggleDone(t.id)}>
-              {t.done ? "Undo" : "Done"}
+              {t.done ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="16px"
+                  viewBox="0 -960 960 960"
+                  width="16px"
+                  fill="#e8eaed"
+                >
+                  <path d="M288-192v-72h288q50 0 85-35t35-85q0-50-35-85t-85-35H330l93 93-51 51-180-180 180-180 51 51-93 93h246q80 0 136 56t56 136q0 80-56 136t-136 56H288Z" />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="16px"
+                  viewBox="0 -960 960 960"
+                  width="16px"
+                  fill="#e8eaed"
+                >
+                  <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                </svg>
+              )}
             </button>
           </li>
         ))}
