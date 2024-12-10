@@ -117,6 +117,9 @@ function App() {
               </button>
             </div>
             <small>{t.time}</small>
+            <button onClick={() => toggleDone(t.id)}>
+              {t.done ? "Undo" : "Done"}
+            </button>
           </li>
         ))}
       </ul>
