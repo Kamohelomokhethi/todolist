@@ -8,14 +8,16 @@ body{
   background: url(../src/assets/2.jpg);
   background-size: cover;
 }
+
+
 .app{
   padding: 20px;
   background: rgba(255,255,255,0.2);
   box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
-  -webkit-backdrop-filter: blur(5.5px);
-  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.18);
+  border: 1px solid rgba(196, 240, 232, 0.18);
 }
 h1{
   margin-top: 0;
@@ -58,18 +60,18 @@ li{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 2px;
   background-color: #f9f9f9;
   border-radius: 5px;
   margin-bottom: 10px;
 }
 
 li div button{
-  background-color: #dc3545;
+  background-color: #e41126;
 }
 
 li div button:hover{
-  background-color: #c82333;
+  background-color: #e61126;
 }
 
 li div button:first-child{
@@ -85,5 +87,5 @@ li div button:first-child:hover{
   margin-left: 20px;
   margin-right: 5px;
   display: flex;
-  justify-content: end;
+  justify-content: space-evenly;
 }
